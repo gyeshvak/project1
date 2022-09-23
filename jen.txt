@@ -1,6 +1,6 @@
 node {
     stage ('Gitlone')  {
-	  git credentialsId: '113f517-c8eb-43dd-8cdd-8db5924eb4b3', url: 'https://github.com/kartikeyapro/ks.git'
+	  git credentialsId: '113f517-c8eb-43dd-8cdd-8db5924eb4b3', url: 'https://github.com/gyeshvak/project1.git'
 	
 	}
 	stage ('Maven version') {
