@@ -1,34 +1,34 @@
 node {
-    stage ('Gitlone')  {
-	  git credentialsId: 'git', url: 'https://github.com/gyeshvak/project1.git'
+     stage('Gitlone')  {
+	    git branch: 'main', credentialsId: 'gyeshvak', url: 'https://github.com/gyeshvak/jenkins_sep.git'
 	
 	}
-	stage ('Maven version') {
+	stage('Maven version') {
 	   sh 'mvn --version'
 	   
 	}   
-	stage ('java version') {
+	stage('java version') {
 	   sh 'java --version'
 	   
 	}  
        
-	stage ('maven validate') {
-	   sh 'mvn --validate'
+	stage('maven validate') {
+	   sh 'mvn validate'
 	   
 	}   
   
-    stage ('maven complie') {
-	   sh 'mvn --complie'
+    stage('maven complie') {
+	   sh 'mvn complie'
 	   
 	}  
 
-    stage ('maven test') {
-	   sh 'mvn --test'
+    stage('maven test') {
+	   sh 'mvn test'
 	   
 	}   	
 
-    stage ('maven package') {
-	   sh 'mvn --package'
+    stage('maven package') {
+	   sh 'mvn package'
 	   
 	}   			
 }
